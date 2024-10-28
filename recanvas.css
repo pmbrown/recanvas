@@ -1,0 +1,160 @@
+/*! recanvas v1.0.0 | Copyright 2024 Phil Brown. | MIT License https://github.com/pmbrown/recanvas/blob/main/LICENSE */
+
+* {
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:where(html) {
+  color-scheme: light dark;
+  color: CanvasText;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: clamp(100%, 40% + 0.666vw, 140%);
+  background-color: Canvas;
+}
+
+:where(body) {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+:where(a) {
+  overflow-wrap: break-word;
+  text-underline-offset: 0.1175em;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  line-height: 1.2;
+  margin-block-end: 0.75rem;
+}
+
+:where(h1) {
+  font-size: 2rem;
+}
+
+:where(h2) {
+  font-size: 1.725rem;
+}
+
+:where(h3) {
+  font-size: 1.5rem;
+}
+
+:where(h4) {
+  font-size: 1.35rem;
+}
+
+:where(h5) {
+  font-size: 1.2rem;
+}
+
+:where(h6) {
+  font-size: 1.063rem;
+  line-height: 1.3;
+}
+
+:where(p, ol, ul, dl, address, hr, details, figure, blockquote) {
+  margin-block-end: 1rem;
+}
+
+:where(dd) {
+  margin-inline-start: 1.5rem;
+}
+
+:where(hr) {
+  border: none;
+  border-block-start: 1px solid light-dark(#ccc, #555);
+}
+
+:where(summary) {
+  cursor: pointer;
+}
+
+:where(blockquote p) {
+  margin-block-end: 0.25rem;
+}
+
+:where(img, svg, video, audio, iframe, embed, object) {
+  display: block;
+}
+
+:where(img, svg) {
+  max-inline-size: 100%;
+}
+
+:where(iframe) {
+  border: 0;
+}
+
+:where(button, input, select, optgroup, textarea),
+::-webkit-file-upload-button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.3;
+  padding-block: 0.188rem;
+  padding-inline: 0.35rem;
+}
+
+:where(button, [type=button], [type=submit], [type=reset]),
+::file-selector-button,
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+}
+
+:where(button, select, optgroup, [type=button], [type=submit], [type=reset]),
+::file-selector-button {
+  cursor: pointer;
+}
+
+:where([type=file]) {
+  padding: 0;
+}
+
+:where(textarea) {
+  display: block;
+  resize: block;
+}
+
+:where(fieldset) {
+  max-inline-size: fit-content;
+}
+
+:where([type=color]) {
+  cursor: pointer;
+  padding: 0;
+}
+
+:where(input[type=color])::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+:where(table) {
+  font-variant-numeric: tabular-nums;
+  inline-size: 100%;
+  margin-block-end: 1rem;
+  border-collapse: collapse;
+}
+
+:where(caption) {
+  text-align: inherit;
+  padding-block-end: 0.25rem;
+}
+
+:where(th) {
+  text-align: inherit;
+}
+
+:where(thead, tbody, tfoot, tr, td, th) {
+  vertical-align: top;
+  border: 1px solid light-dark(#ccc, #555);
+}
+
+:where(tbody, thead) th, td {
+  padding-block: 0.188rem;
+  padding-inline: 0.35rem;
+  white-space: nowrap;
+}
